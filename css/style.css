@@ -1,0 +1,78 @@
+/*Valores validos para no tener problema
+No importa mayusculas o minusculas
+
+Hojas de estilo en cascada se lee de arriba hacia abajo*/
+/* h1 {
+    color: blue;
+    padding: 10;
+}
+/* Se reescibe ya que se conserva el que este mas abajo*/
+/*
+h1 {
+    color:red;
+    padding: 10;
+}
+/*Estilos de id 
+#site-header {
+    background-color: red;
+}
+/*Estilos de clases
+.encabezado {
+    color: salmon;
+}
+
+/*Se aplican diferentes clases 
+para cada elemento para el id 
+no se pueden tener tantos no es recomendable 
+usarlos 
+.mayusculas {
+    font-size: 10px;
+} */
+
+/*Principal Comun*/
+/*Margen automaticato para centrarlo*/
+
+body{
+    font-family: 'Noto Serif', serif;
+}
+
+/*Globales*/
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.site-header.inicio 
+{
+    background-image: url(../img/header.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 600px;
+}
+/* Flexbox para habilitarlo*/
+.barra{
+    display: flex;
+    /*justify-content: flex-end; /*Lo manda hacia la derecha */
+   /*justify-content: space-around; /*Deja un espacio entre los elementos*/
+    justify-content: space-between; /*Uno a la derecha y otro a la izquierda*/
+    padding-top: 30px; /*Espacio dentro del elemento*/
+    align-items: center;
+}
+
+/*Navegacion*/
+.navegacion a{
+    color: white;/*rgb,rgba,hsla*/
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.navegacion a:hover{
+    color: gold;
+}
+/*Pseudoselector */
+.navegacion a:last-of-type{
+    margin: 0;
+}
