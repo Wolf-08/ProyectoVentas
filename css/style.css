@@ -31,17 +31,44 @@ usarlos
 
 /*Principal Comun*/
 /*Margen automaticato para centrarlo*/
-
+html{
+    font-size: 62.5%; /*Reset para rems -62.5% = 10 px de 16 px*/
+}
 body{
     font-family: 'Noto Serif', serif;
+    font-size: 1.6rem;
 }
 
 /*Globales*/
 .contenedor{
-    max-width: 1200px;
+    max-width: 120rem; /*1200px*/
     margin: 0 auto;
 }
 
+h1{
+font-size: 3.8rem;
+}
+h2{
+font-size: 3.4rem;
+}
+h3{
+    font-size: 3rem;
+
+}
+h4{
+    font-size: 2.6rem;
+
+}
+/**Utilidades**/
+
+.section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.fw-300{
+    font-weight: 400;
+    text-align: center;
+}
 /* Header */
 .site-header.inicio 
 {
@@ -49,7 +76,22 @@ body{
     background-position: center center;
     background-size: cover;
     height: 100vh;
-    min-height: 600px;
+    min-height: 60rem;
+}
+/*Display flexbox para el titulo
+Le debemos indicar la direccion */
+.contenido-header{
+    height: 100%;
+    display: flex; /*Direccion de arriba hacia abajo afecta a barra y h1 afecta el primer nivel de hijos*/
+    flex-direction: column;
+    justify-content: space-between; /*Flexbox es lo nuevo*/
+    
+}
+.contenido-header h1{
+    color: white;
+    padding-bottom: 2rem; /*Espacio hacia dentro del elemento Margin separacion del elemento hacia otro elemento*/ 
+    max-width: 60rem;
+    line-height: 2;
 }
 /* Flexbox para habilitarlo*/
 .barra{
@@ -57,7 +99,7 @@ body{
     /*justify-content: flex-end; /*Lo manda hacia la derecha */
    /*justify-content: space-around; /*Deja un espacio entre los elementos*/
     justify-content: space-between; /*Uno a la derecha y otro a la izquierda*/
-    padding-top: 30px; /*Espacio dentro del elemento*/
+    padding-top: 3rem; /*Espacio dentro del elemento*/
     align-items: center;
 }
 
@@ -65,8 +107,8 @@ body{
 .navegacion a{
     color: white;/*rgb,rgba,hsla*/
     text-decoration: none;
-    font-size: 18px;
-    margin-right: 20px;
+    font-size: 1.8rem; /*1.8 rems = 18 px*/
+    margin-right: 2rem;
     font-family: 'Times New Roman', Times, serif;
 }
 .navegacion a:hover{
@@ -75,4 +117,17 @@ body{
 /*Pseudoselector */
 .navegacion a:last-of-type{
     margin: 0;
+}
+/*Iconos nosotros*/
+.iconos-nosotros{
+    display: flex;
+}
+.icono{
+    flex-basis: calc(33.3% - 1rem); /*width*/
+    /*flex-basis: calc(200px-50px);*/
+    justify-content: space-between;
+    text-align: center; /*Se pueden alinear como word xD*/
+}
+.icono h3{
+    text-transform: uppercase;
 }

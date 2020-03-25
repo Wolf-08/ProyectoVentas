@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css"> <!--Esta al final-->
     <title>Alejandro Montecillo</title>
 </head>
 
 <body>
     <header class="site-header inicio">
-        <div class="contenedor">
+        <div class="contenedor contenido-header">
             <div class="barra">
                 <a href="/">
                     <img src="/img/logo.svg" alt="Logotipo">
@@ -25,7 +26,7 @@
                     <a href="">Blog</a>
                 </nav>
             </div>
-            <h1>Venta de Algo</h1>
+            <h1>Venta de Algo <br> Casas y Departamento</h1>
             <!--Se recomienda solo tener Uno-->
         </div> <!--Contenedor-->
     </header>
@@ -33,34 +34,35 @@
     <!--Para Posicionamiento de páginas de google el h1 es lo que busca lo importante-->
     <!--Google Penaliza las etiquetas malas-->
     <!--HTML cierra las etiquetas cuando lo nota-->
-    <p>Alejandro</p>
-    <section>
+    <section class="contenedor seccion">
         <!--Empieza con un heading2 Cambio de conenido-->
 
-        <h2>Más sobre Nosotros</h2>
+        <h2 class="fw-300">Más sobre Nosotros</h2>
         <!--Para contenido menos importantes (mas imp+H1--  -impor h6-->
         <!--svg de ilustrator adobexD para no distorcionas 20pixeles-->
-        <div>
-            <img src="/img/icono1.svg" width="20" alt="iconoSeguridad">
+        <div class="iconos-nosotros">
+        <div class="icono">
+            <img src="/img/icono1.svg"  alt="iconoSeguridad">
             <h3 class="encabezado mayusculas">Seguridad</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quo, dolorum voluptatum unde nostrum necessitatibus provident, dignissimos voluptates ducimus veritatis,
                 totam non modi suscipit ex? Sequi quae blanditiis est autem corporis.</p>
         </div>
-        <div>
+        <div class="icono">
             <img src="/img/icono2.svg" alt="iconoMejorPrecio">
             <h3 class="encabezado">El mejor Precio</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quo, dolorum voluptatum unde nostrum necessitatibus provident, dignissimos voluptates ducimus veritatis,
                 totam non modi suscipit ex? Sequi quae blanditiis est autem corporis.</p>
         </div>
-        <div>
+        <div class="icono">
             <img src="/img/icono3.svg" alt="iconoATiempo">
             <h3 class="encabezado">A tiempo</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quo, dolorum voluptatum unde nostrum necessitatibus provident, dignissimos voluptates ducimus veritatis,
                 totam non modi suscipit ex? Sequi quae blanditiis est autem corporis.</p>
         </div>
+    </div>
     </section>
     <main>
         <!--Contenido principal solo un main-->
