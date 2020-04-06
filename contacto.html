@@ -41,13 +41,13 @@
             <fieldset>
                 <legend>Informacion Personal</legend>
                 <label for="Nombre">Nombre:</label>
-                <input type="text" id="Nombre" placeholder="Nombre">
+                <input class="nombre" type="text" id="Nombre" placeholder="Nombre">
                 <label for="email">E-mail</label>
                 <input type="email" id="email" placeholder="Correo Electronico" required>
                 <label for="telefono">Telefono</label>
                 <input type="tel" id="telefono" placeholder="Telefono" required> <!--Valor requerido y se recomienda para movil-->
                 <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" cols="60" rows="10">TextArea</textarea>
+                <textarea id="mensaje" cols="60" rows="10"></textarea>
             </fieldset>
 
             <fieldset>
@@ -66,11 +66,12 @@
             <fieldset>
                 <legend>Contacto</legend>
                 <p>Como desea ser contactado:</p>
+                <div class="forma-contacto">
                 <label for="telefono">Télefono</label>
                 <input type="radio" name="contacto" id="telefono">
                 <label for="correo">email</label>
                 <input type="radio"  name="contacto" id="correo">
-
+            </div>
                 <p>Se eligio Teléfono, elija feccha y hora</p>
                 <label for="fecha">Fecha:</label>
                 <input type="date" id="fecha">
