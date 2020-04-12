@@ -2,11 +2,15 @@
 No importa mayusculas o minusculas
 
 Hojas de estilo en cascada se lee de arriba hacia abajo*/
+
+
 /* h1 {
     color: blue;
     padding: 10;
 }
 /* Se reescibe ya que se conserva el que este mas abajo*/
+
+
 /*
 h1 {
     color:red;
@@ -29,165 +33,277 @@ usarlos
     font-size: 10px;
 } */
 
-/*Principal Comun*/
-/*Margen automaticato para centrarlo*/
-html{
-    font-size: 62.5%; /*Reset para rems -62.5% = 10 px de 16 px*/
 
+/*Principal Comun*/
+
+
+/*Margen automaticato para centrarlo*/
+
+html {
+    font-size: 62.5%;
+    /*Reset para rems -62.5% = 10 px de 16 px*/
 }
 
-*,*:before, *:after
-{
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
-body{
+
+body {
     font-family: 'Noto Serif', serif;
     font-size: 1.6rem;
 }
 
-/*Globales*/
-img{
-    max-width: 100%; 
 
+/*Globales*/
+
+img {
+    max-width: 100%;
 }
-.contenedor{
+
+.contenedor {
     width: 95%;
-    max-width: 120rem; /** = 1200px; **/
+    max-width: 120rem;
+    /** = 1200px; **/
     margin: 0 auto;
 }
 
-h1{
-font-size: 3.8rem;
+h1 {
+    font-size: 3.8rem;
 }
-h2{
-font-size: 3.4rem;
+
+h2 {
+    font-size: 3.4rem;
 }
-h3{
+
+h3 {
     font-size: 3rem;
-
 }
-h4{
+
+h4 {
     font-size: 2.6rem;
-
 }
+
+
 /**Utilidades**/
 
 .seccion {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-.fw-300{
+
+.fw-300 {
     font-weight: 400;
     text-align: center;
 }
 
-.d-block{
- display: block!important;
+.d-block {
+    display: block!important;
 }
 
-.contenido-centrado{
+.contenido-centrado {
     max-width: 800px;
 }
+
+
 /**Botones**/
 
-.boton{
+.boton {
     color: white;
     font-weight: 700;
     text-decoration: none;
     font-size: 1.8rem;
-    padding: 1rem 3rem; /*Espacio hacia dentro del elemento*/
+    padding: 1rem 3rem;
+    /*Espacio hacia dentro del elemento*/
     margin-top: 3rem;
     padding: 1rem 3rem;
     display: inline-block;
     text-align: center;
     border: none;
+    display: block;
+    flex: 0 0 100%
 }
-.boton:hover{
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+
+.boton:hover {
     cursor: pointer;
 }
-.boton-amarillo{
-background-color: #e08709;
+
+.boton-amarillo {
+    background-color: #e08709;
 }
-.boton-verde
-{
-background-color: #71b100 ;
+
+.boton-verde {
+    background-color: #71b100;
 }
+
+
 /* Header */
-.site-header{
+
+.site-header {
     background-color: #333333;
     padding: 1rem 0rem 3rem 0rem;
 }
-.site-header.inicio 
-{
+
+.site-header.inicio {
     background-image: url(../img/header.jpg);
     background-position: center center;
     background-size: cover;
     height: 100vh;
     min-height: 60rem;
 }
+
+
 /*Display flexbox para el titulo
 Le debemos indicar la direccion */
-.contenido-header{
+
+.contenido-header {
     height: 100%;
-    display: flex; /*Direccion de arriba hacia abajo afecta a barra y h1 afecta el primer nivel de hijos*/
+    display: flex;
+    /*Direccion de arriba hacia abajo afecta a barra y h1 afecta el primer nivel de hijos*/
     flex-direction: column;
-    justify-content: space-between; /*Flexbox es lo nuevo*/
-    
+    justify-content: space-between;
+    /*Flexbox es lo nuevo*/
+    text-align: center;
 }
-.contenido-header h1{
+
+@media (min-width: 768px) {
+    .contenido-header {
+        text-align: left;
+    }
+}
+
+.contenido-header h1 {
     color: white;
-    padding-bottom: 2rem; /*Espacio hacia dentro del elemento Margin separacion del elemento hacia otro elemento*/ 
+    padding-bottom: 2rem;
+    /*Espacio hacia dentro del elemento Margin separacion del elemento hacia otro elemento*/
     max-width: 60rem;
     line-height: 2;
 }
+
+
 /* Flexbox para habilitarlo*/
-.barra{
-    display: flex;
-    /*justify-content: flex-end; /*Lo manda hacia la derecha */
-   /*justify-content: space-around; /*Deja un espacio entre los elementos*/
-    justify-content: space-between; /*Uno a la derecha y otro a la izquierda*/
-    padding-top: 3rem; /*Espacio dentro del elemento*/
-    align-items: center;
+
+.barra {
+    padding-top: 3rem;
 }
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        /*justify-content: flex-end; /*Lo manda hacia la derecha */
+        /*justify-content: space-around; /*Deja un espacio entre los elementos*/
+        justify-content: space-between;
+        /*Uno a la derecha y otro a la izquierda*/
+        padding-top: 3rem;
+        /*Espacio dentro del elemento*/
+        align-items: center;
+    }
+}
+
 
 /*Navegacion*/
-.navegacion a{
-    color: white;/*rgb,rgba,hsla*/
+
+.navegacion a {
+    color: white;
+    /*rgb,rgba,hsla*/
     text-decoration: none;
-    font-size: 1.8rem; /*1.8 rems = 18 px*/
-    margin-right: 2rem;
+    font-size: 2.2rem;
+    /*1.8 rems = 18 px*/
     font-family: 'Times New Roman', Times, serif;
+    display: block;
 }
-.navegacion a:hover{
+
+@media (min-width: 768px) {
+    .navegacion a {
+        margin-right: 2rem;
+        font-size: 1.8rem;
+        display: inline-block;
+    }
+    /*Pseudoselector */
+    .navegacion a:last-of-type {
+        margin: 0;
+    }
+}
+
+.navegacion a:hover {
     color: gold;
 }
-/*Pseudoselector */
-.navegacion a:last-of-type{
-    margin: 0;
+
+
+/**Menu mobile*/
+
+.mobile-menu img {
+    width: 5rem;
 }
+
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
+.navegacion:target {
+    display: block;
+}
+
+.navegacion {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        display: block;
+    }
+}
+
+
 /*Iconos nosotros*/
-.iconos-nosotros{
-    display: flex;
+
+@media (min-width: 768px) {
+    .iconos-nosotros {
+        display: flex;
+        justify-content: space-between;
+    }
 }
-.icono{
-    flex-basis: calc(33.3% - 1rem); /*width*/
+
+.icono {
+    flex-basis: calc(33.3% - 1rem);
+    /*width*/
     /*flex-basis: calc(200px-50px);*/
-    justify-content: space-between;
-    text-align: center; /*Se pueden alinear como word xD*/
+    text-align: center;
+    /*Se pueden alinear como word xD*/
 }
-.icono h3{
+
+@media (min-width: 768px) {
+    .icono {
+        flex-basis: calc(33.3% - 1rem);
+    }
+}
+
+.icono h3 {
     text-transform: uppercase;
 }
+
+
 /*Anuncios*/
 
-.contenedor-anuncios{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    
+@media (min-width: 768px) {
+    .contenedor-anuncios {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
-.anuncio{
-    flex: 0 0 calc(33.3% - 1rem);
+
+.anuncio {
     /*flex-basis: calc(33.3% - 1rem);
     border-style: solid;
     border-color: teal;
@@ -196,92 +312,126 @@ Le debemos indicar la direccion */
     background: #f5f5f5;
     margin-bottom: 2rem;
 }
-.contenido-anuncio{
-    padding: 2rem; /*Aplica al padding en todas las direcciones*/
+
+@media (min-width: 768px) {
+    .anuncio {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
 }
+
+.contenido-anuncio {
+    padding: 2rem;
+    /*Aplica al padding en todas las direcciones*/
+}
+
 .contenido-anuncio h3,
-.contenido-anuncio p{
+.contenido-anuncio p {
     margin: 0;
 }
-.precio{
+
+.precio {
     color: greenyellow;
-    font-weight: 700; /* Para los parrafos*/
+    font-weight: 700;
+    /* Para los parrafos*/
 }
-.ver-todas{
+
+.ver-todas {
     margin-bottom: 3rem;
     display: flex;
     justify-content: flex-end;
 }
+
+
 /*Contacto home*/
-.imagen-contacto{
+
+.imagen-contacto {
     background-image: url(/img/encuentra.jpg);
     background-position: center center;
     background-size: cover;
     height: 40rem;
     display: flex;
     align-items: center;
-
 }
-.contenido-contacto{
-    /* flex: 1; */
+
+.contenido-contacto {
+    flex: 0 0 95%;
     color: white;
     font-size: 1.8rem;
 }
-.iconos-caracteristicas{
+
+.iconos-caracteristicas {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: space-evenly;
-    flex:1;
+    flex: 1;
     max-width: 500px;
-
 }
-.iconos-caracteristicas li{
+
+.iconos-caracteristicas li {
     flex: 1;
     display: flex
 }
-.iconos-caracteristicas li img{
+
+.iconos-caracteristicas li img {
     margin-right: 2rem;
 }
 
+
 /*Seccion inferior*/
 
-.seccion-inferior{
-    display: flex;
-    justify-content: space-between;
+@media (min-width: 768px) {
+    .seccion-inferior {
+        display: flex;
+        justify-content: space-between;
+    }
+    .seccion-inferior .blog {
+        flex-basis: 60%;
+    }
+    .seccion-inferior .testimoniales {
+        flex-basis: calc(40% - 2rem);
+    }
 }
 
-.seccion-inferior .blog{
- flex-basis: 60%;
-}
-.seccion-inferior .testimoniales{
-    flex-basis: calc(40% - 2rem);
-}
-
-.entrada-blog{
-    display: flex;
-    justify-content: space-between;
+.entrada-blog {
     margin-bottom: 2rem;
 }
-.entrada-blog:last-of-type{
+
+@media (min-width: 768px) {
+    .entrada-blog {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+}
+
+.entrada-blog:last-of-type {
     margin-bottom: 0;
 }
-.entrada-blog .imagen{
-    flex-basis: 40%;
+
+@media (min-width: 768px) {
+    .entrada-blog .imagen {
+        flex-basis: 40%;
+    }
+    .entrada-blog .texto-entrada {
+        flex-basis: calc(60% - 3rem);
+    }
 }
-.entrada-blog .texto-entrada{
- flex-basis: calc(60% - 3rem);
-}
-.texto-entrada h4{
+
+.texto-entrada h4 {
     margin: 0;
     line-height: 1.2;
     font-size: 2rem;
 }
-.texto-entrada a{
+
+.texto-entrada a {
     color: black;
-    text-decoration: none; /* Quitar el subrayado*/
+    text-decoration: none;
+    /* Quitar el subrayado*/
 }
-.texto-entrada h4::after{ /*PSEUDOCLASES*/
+
+.texto-entrada h4::after {
+    /*PSEUDOCLASES*/
     content: '';
     display: block;
     width: 15rem;
@@ -289,23 +439,28 @@ Le debemos indicar la direccion */
     background-color: #71b100;
     margin-top: 1rem;
 }
+
 .texto-entrada span {
-    color: #e08709 ;
+    color: #e08709;
     font-size: 1.8rem;
 }
+
+
 /**Testimoniales*/
-.testimonial{
+
+.testimonial {
     background-color: #71b100;
     font-size: 2.4rem;
     padding: 2rem;
     color: #ffffff;
     border-radius: 2rem;
-
 }
-.testimonial p{
+
+.testimonial p {
     text-align: right;
 }
-.testimonial blockquote::before{
+
+.testimonial blockquote::before {
     content: '';
     background-image: url(/img/comilla.svg);
     width: 4rem;
@@ -314,63 +469,90 @@ Le debemos indicar la direccion */
     position: absolute;
     left: -2rem;
 }
-.testimonial blockquote{
+
+.testimonial blockquote {
     position: relative;
     padding-left: 5rem;
     font-weight: 400;
 }
-.site-footer{
+
+.site-footer {
     background-color: #333333;
     margin-top: 3rem;
     margin-bottom: 0;
 }
 
-.contenedor-footer{
+.contenedor-footer {
     padding: 3rem 0;
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
 }
-.copyright
-{
+
+@media (min-width: 768px) {
+    .contenedor-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.site-footer nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .site-footer nav {
+        display: block;
+    }
+}
+
+.copyright {
     margin: 0;
     color: #ffffff;
 }
-/****Internas******/
-.contenido-nosotros{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 1fr 1fr*/
-    grid-column-gap: 2rem;
-} 
 
-.texto-nosotros blockquote{
+
+/****Internas******/
+
+@media (min-width: 768px) {
+    .contenido-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 1fr 1fr*/
+        grid-column-gap: 2rem;
+    }
+}
+
+.texto-nosotros blockquote {
     font-weight: 900;
     margin: 0;
     font-size: 2rem;
     padding: 1rem 0 3rem 0rem;
-
 }
-.resumen-propiedad{
+
+.resumen-propiedad {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+
 /*Contacto*/
 
-legend{
+legend {
     margin-bottom: 2rem;
     font-size: 2.2rem;
     color: #333333;
 }
-label{
+
+label {
     display: block;
     font-weight: 900;
     text-transform: uppercase;
-
 }
+
 input:not([type="submit"]),
 textarea,
-select{ /*Usarlo de esta manera o con clases*/
-
+select {
+    /*Usarlo de esta manera o con clases*/
     padding: 1rem;
     display: block;
     width: 98%;
@@ -379,18 +561,22 @@ select{ /*Usarlo de esta manera o con clases*/
     border: none;
     border-radius: 1rem;
 }
-select{
+
+select {
     -webkit-appearance: none;
     appearance: none;
 }
-textarea{
+
+textarea {
     height: 20rem;
 }
-input[type="radio"]{
+
+input[type="radio"] {
     width: auto;
     margin: 0;
 }
-.forma-contacto{
+
+.forma-contacto {
     max-width: 30rem;
     display: flex;
     justify-content: space-between;
